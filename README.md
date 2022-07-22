@@ -1,9 +1,42 @@
-## MLOps
-Repository for MLOps experiments
+## MLOps - Crypto Trading
 
-  **Note**: You need an .env file with credentials to boot the mysql container locally.
+Uses Flask to allow users to follow various cryptocurrency trends. Dash is integrated into the app as a seperate feature to run custom stock analysis and predictions.
 
-  <details>
+![Dash Demo](https://github.com/SalMireles/mlops/master/app/static/app-demo.jpg?raw=true)
+
+
+ This project was started as a collaborative sprint between multiple developers and eventually I forked it to complete it and put a nice bow on it. See original PR history here: https://github.com/PDXPythonPirates/ppp-project-2
+ 
+ Personal Goals: 
+  - Learn the ins and outs of Flask for web app developement
+  - Containerization using Docker
+  - Schema design and working with Databases
+  - Deploying and productionizing an app
+  - Contiuous Integration
+  - Extend the app to run stock analysis
+<details open>
+<summary>Tech Stack Information</summary>
+<br>
+   <ul>
+
+<li> Flask Backend</li>
+<li> Utilized github actions for continuous integration and testing</li>
+<li> Containerized using docker compose</li>
+<li> Javascript and Jinja frontend rendering</li>
+<li> Integrated dash app for quick analysis</li>
+<li> Utilizes CoinGecko API to gather coin data</li>
+<li> Added MySQL database for prod deployment</li>
+<li> pre-commit linting to adhere to black and flake8</li>
+<li> Added unit tests to verify page functionality</li>
+
+   </ul>
+</details>
+
+## How to boot the app
+
+ **Note**: You need an .env file with credentials to boot the mysql container locally.
+
+ <details>
 <summary>Required environment variables</summary>
 <br>
    <ul>
@@ -32,7 +65,6 @@ Repository for MLOps experiments
    </ul>
 </details>
 
-## How to boot the app
 - #### With docker compose (recommended for prod)
     1. run `make up` 
        * Runs the docker containers locally and opens on  http://localhost:5000 (this also boots a mysql container)
@@ -98,7 +130,7 @@ Repository for MLOps experiments
 Help with various installation/setup issues:
 
  * [Mac](#Mac)
-
+https://github.com/culturerobotics/universe/blob/fbc0dd1da6ad3ea3da11001d0a9adfdddc7630a9/vessel/cookbook/cora075_scalable_process_5L.py#L320
 #### Mac
 
 - Error port 5000 already in use. How to free up this port: system preferences > sharing > uncheck airplay receiver.
