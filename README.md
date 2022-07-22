@@ -23,6 +23,7 @@ Uses Flask to allow users to follow various cryptocurrency trends. Dash is integ
 <li> Integrated dash app for quick analysis</li>
 <li> Utilizes CoinGecko API to gather coin data</li>
 <li> Added MySQL database for prod deployment</li>
+<li> pre-commit linting to adhere to black and flake8</li>
 <li> Added unit tests to verify page functionality</li>
 
    </ul>
