@@ -2,8 +2,7 @@
 
 Uses Flask to allow users to follow various cryptocurrency trends. Dash is integrated into the app as a seperate feature to run custom stock analysis and predictions.
 
-![Dash Demo](https://github.com/SalMireles/mlops/master/app/static/app-demo.jpg?raw=true)
-
+![Dash Demo](https://github.com/SalMireles/mlops/blob/master/app/static/app-demo.jpg?raw=true)
 
  This project was started as a collaborative sprint between multiple developers and eventually I forked it to complete it and put a nice bow on it. See original PR history here: https://github.com/PDXPythonPirates/ppp-project-2
  
