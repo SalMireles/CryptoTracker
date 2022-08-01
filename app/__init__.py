@@ -2,6 +2,7 @@ import os
 import config
 from flask import Flask
 from flask_bootstrap import Bootstrap
+from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 
@@ -13,11 +14,16 @@ CONFIG = config.ProdConfig if os.environ.get("APP_SETTING") else config.DevConfi
 app.config.from_object(CONFIG)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
+login = LoginManager(app)
+# handle login
+login = LoginManager(app)
+login.login_view = "login"
 
 
 with app.app_context():
     # Import parts of our core Flask app
-    from app import routes, errors, models, db  # noqa
+    # Define in this context to avoid circular imports
+    from app import routes, errors, models, db, login  # noqa
 
     # Import Dash application
     from .plotly_dash.dashboard import init_dashboard

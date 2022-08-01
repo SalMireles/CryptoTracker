@@ -1,5 +1,10 @@
+.EXPORT_ALL_VARIABLES:
+PYENV_VERSION = 3.8.10
+
+
 # to boot the app run `flask run` after `make install`
 install:
+	@echo $$PYENV_VERSION
 	@pip install --upgrade pip
 	@pip install poetry==1.1.12
 	@poetry install ${POETRY_ARGS}
@@ -15,6 +20,12 @@ install:
 	@echo " "
 	@echo "make sure to run -flask run- then open the specified url"
 	@echo " "
+
+run:
+	@flask run
+
+localhost:
+	@open http://127.0.0.1:5000/
 
 test:
 	python -m poetry run python -m pytest -v tests
@@ -55,6 +66,8 @@ stop:
 define help_info
 
 make install: 	installs poetry and boots virtual env
+make run:       boots the dev flask app
+make localhost: opens app in localhost
 make test:      runs all tests
 make up:		use docker compose to spin up the app and sql containers
 make down:      use docker compose to shut down containers
