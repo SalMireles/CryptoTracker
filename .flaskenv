@@ -4,5 +4,5 @@ FLASK_ENV=development
 FLASK_DEBUG=true
 # database format info for sqlalchemy *://username:password@host:port/database_name
 # mysql-sqlalchemy local config (not using containers).
-# uncomment to run mysql in the local dev environment.
-# DATABASE_URL = mysql+pymysql://pyrate:iamyourcaptain@localhost:3306/pyrates
+# uncomment to run MYSQL (not sqllite) in the local dev environment.
+MYSQL_DATABASE_URL = mysql+pymysql://pyrate:iamyourcaptain@127.0.0.1:3306/pyrates
