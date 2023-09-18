@@ -1,11 +1,16 @@
-name: Log Message
+name: Log Message with Sleep
 
 on: [push]
 
 jobs:
-  message:
+  build:
     runs-on: ubuntu-latest
     steps:
+      # Add a 5-second sleep using 'sleep'
+      - name: Sleep for 5 seconds
+        run: sleep 5
+
       - name: Log Message
         run: echo "Log message: Dependencies installed successfully."
+
 
