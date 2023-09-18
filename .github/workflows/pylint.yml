@@ -3,8 +3,9 @@ name: Log Message
 on: [push]
 
 jobs:
-  build:
+  message:
     runs-on: ubuntu-latest
     steps:
-    - name: Log Message
-      run: echo "Log message: Dependencies installed successfully."
+      - name: Log Message
+        run: echo "Log message: Dependencies installed successfully."
+
