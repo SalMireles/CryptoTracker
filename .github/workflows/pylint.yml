@@ -3,7 +3,7 @@ name: Log Message with Sleep
 on: [push]
 
 jobs:
-  build:
+  message:
     runs-on: ubuntu-latest
     steps:
       # Add a 5-second sleep using 'sleep'
